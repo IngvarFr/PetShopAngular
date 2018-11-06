@@ -1,0 +1,25 @@
+<form [formGroup]="petForm" (ngSubmit)="addPet()">
+  <label>
+    Name:
+    <input type="text" formControlName="Name">
+  </label>
+  <label>
+    Type:
+    <input type="text" formControlName="Type">
+  </label>
+  <label>
+    Color:
+    <input type="text" formControlName="Color">
+  </label>
+  <label>
+    Sell Date:
+    <input type="text" formControlName="SoldDate">
+  </label>
+  <label>
+    Previous Owner:
+    <input type="text" formControlName="PreviousOwner">
+  </label>
+
+  <button type="submit">Add Pet</button>
+</form>
+
