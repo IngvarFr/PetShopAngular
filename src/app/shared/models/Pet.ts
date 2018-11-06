@@ -1,8 +1,10 @@
 export class Pet {
-  Id?: number;
-  Name?: string;
-  Type?: string;
-  Color?: string;
-  SoldDate?: string;
-  PreviousOwner?: string;
+  id?: number;
+  name?: string;
+  type?: string;
+  color?: string;
+  birthDate?: Date;
+  soldDate?: Date;
+  previousOwner?: string;
+  price?: number;
 }

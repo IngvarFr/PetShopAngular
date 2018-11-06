@@ -1,8 +1,10 @@
-<ul>
+<button routerLink="/pet-add">Add pet</button>
+<ul *ngIf="pets">
   <li *ngFor="let pet of pets">
-    <a routerLink="/pets/{{pet.Id}}"> {{pet.Name}}</a>
-    <button routerLink="/pet-update/{{pet.Id}}">Update</button>
-    <button (click)="delete(pet.Id)">Delete</button>
+    <a routerLink="/pets/{{pet.id}}"> {{pet.name}}</a>
+    <button routerLink="/pet-update/{{pet.id}}">Update</button>
+    <button (click)="delete(pet.id)">Delete</button>
   </li>
 </ul>
-<button routerLink="/pet-add">Add Pet</button>
+<h4 *ngIf="!pets">Loading...</h4>
+

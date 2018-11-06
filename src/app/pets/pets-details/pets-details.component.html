@@ -1,10 +1,12 @@
 <h1>Pet Details</h1>
 <div *ngIf="pet">
-  <h2>Id: {{pet.Id}}</h2>
-  <h2>Name: {{pet.Name}}</h2>
-  <h2>Type: {{pet.Type}}</h2>
-  <h2>Color: {{pet.Color}}</h2>
-  <h2>Sell Date: {{pet.SoldDate}}</h2>
-  <h2>Previous Owner: {{pet.PreviousOwner}}</h2>
+  <h2>Id: {{pet.id}}</h2>
+  <h2>Name: {{pet.name}}</h2>
+  <h2>Type: {{pet.type}}</h2>
+  <h2>Color: {{pet.color}}</h2>
+  <h2>Birth Date: {{pet.birthdate}}</h2>
+  <h2>Sell Date: {{pet.soldDate}}</h2>
+  <h2>Previous Owner: {{pet.previousOwner.firstName}} {{pet.previousOwner.lastName}}</h2>
+  <h2>Price: {{pet.price}}</h2>
 </div>
 <h2 *ngIf="!pet">No pet with id: {{id}}</h2>

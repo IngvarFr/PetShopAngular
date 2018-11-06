@@ -15,7 +15,8 @@ export class PetAddComponent implements OnInit {
     Type: new FormControl(''),
     Color : new FormControl(''),
     SoldDate: new FormControl(''),
-    PreviousOwner: new FormControl('')
+    PreviousOwner: new FormControl(''),
+    Price: new FormControl('')
   });
 
   constructor(private petService: PetService,
@@ -25,9 +26,9 @@ export class PetAddComponent implements OnInit {
   }
 
   addPet() {
-  this.petService.addPet(this.petForm.getRawValue());
-  this.petForm.reset();
-  alert('Pet added');
-  this.router.navigateByUrl('/pets');
+  this.petService.addPet(this.petForm.value).subscribe(message => {
+    console.log(message);
+    this.router.navigateByUrl('/pets');
+  });
   }
 }
