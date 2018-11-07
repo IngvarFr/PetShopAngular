@@ -11,6 +11,10 @@ import { PetAddComponent } from './pets/pet-add/pet-add.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { PetUpdateComponent } from './pets/pet-update/pet-update.component';
 import {HttpClientModule} from '@angular/common/http';
+import { OwnersListComponent } from './owners/owners-list/owners-list.component';
+import { OwnersDetailsComponent } from './owners/owners-details/owners-details.component';
+import { OwnerAddComponent } from './owners/owner-add/owner-add.component';
+import { OwnerUpdateComponent } from './owners/owner-update/owner-update.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import {HttpClientModule} from '@angular/common/http';
     PetsListComponent,
     PetsDetailsComponent,
     PetAddComponent,
-    PetUpdateComponent
+    PetUpdateComponent,
+    OwnersListComponent,
+    OwnersDetailsComponent,
+    OwnerAddComponent,
+    OwnerUpdateComponent
   ],
   imports: [
     BrowserModule,
