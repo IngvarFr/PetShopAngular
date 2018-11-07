@@ -6,7 +6,7 @@
   <h2>Color: {{pet.color}}</h2>
   <h2>Birth Date: {{pet.birthdate}}</h2>
   <h2>Sell Date: {{pet.soldDate}}</h2>
-  <h2>Previous Owner: {{pet.previousOwner.firstName}} {{pet.previousOwner.lastName}}</h2>
+  <h2 *ngIf="pet.previousOwner">Previous Owner: {{pet.previousOwner.firstName}} {{pet.previousOwner.lastName}}</h2>
   <h2>Price: {{pet.price}}</h2>
 </div>
 <h2 *ngIf="!pet">No pet with id: {{id}}</h2>
