@@ -1,3 +1,9 @@
-<p>
-  owners-list works!
-</p>
+<button routerLink="/owner-add">Add owner</button>
+<ul *ngIf="owners">
+  <li *ngFor="let owner of owners">
+    <a routerLink="/owners/{{owner.id}}"> {{owner.firstName}}</a>
+    <button routerLink="/owner-update/{{owner.id}}">Update</button>
+    <button (click)="delete(owner.id)">Delete</button>
+  </li>
+</ul>
+<h4 *ngIf="!owners">Loading...</h4>

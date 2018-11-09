@@ -1,3 +1,9 @@
-<p>
-  owners-details works!
-</p>
+<h1>Owner Details</h1>
+<div *ngIf="owner">
+  <h2>Id: {{owner.id}}</h2>
+  <h2>Name: {{owner.firstName}} {{owner.lastName}}</h2>
+  <h2>Address: {{owner.address}}</h2>
+  <h2>Email: {{owner.email}}</h2>
+  <h2>Phone number: {{owner.phoneNumber}}</h2>
+</div>
+<h2 *ngIf="!owner">Loading...</h2>

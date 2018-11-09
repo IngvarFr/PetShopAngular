@@ -9,7 +9,6 @@ import {Observable} from 'rxjs';
 export class PetService {
 
   apiUrl = 'https://petshop-ing2018.azurewebsites.net/api/pets/';
-  idCounter = 3;
   pets: Pet[];
   constructor(private  http: HttpClient) {
   }

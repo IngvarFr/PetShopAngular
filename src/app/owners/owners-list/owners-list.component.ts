@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Owner} from '../../shared/models/Owner';
+import {OwnerService} from '../../shared/services/owner.service';
 
 @Component({
   selector: 'app-owners-list',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OwnersListComponent implements OnInit {
 
-  constructor() { }
+  owners: Owner[];
+
+  constructor(private ownerService: OwnerService) { }
 
   ngOnInit() {
+    this.refresh();
   }
 
+  delete(id: number) {
+    this.ownerService.deleteOwner(id).subscribe(message => {
+      console.log('Deleted owner: ' + message);
+      this.refresh();
+    });
+  }
+
+  refresh() {
+    this.ownerService.getOwners().subscribe(listOfPets => {
+      this.owners = listOfPets;
+    });
+  }
 }

@@ -1,3 +1,25 @@
-<p>
-  owner-update works!
-</p>
+<form [formGroup]="ownerForm" (ngSubmit)="updateOwner()">
+  <label>
+    First Name:
+    <input type="text" formControlName="FirstName">
+  </label>
+  <label>
+    Last Name:
+    <input type="text" formControlName="LastName">
+  </label>
+  <label>
+    Address:
+    <input type="text" formControlName="Address">
+  </label>
+  <label>
+    Email:
+    <input type="text" formControlName="Email">
+  </label>
+  <label>
+    Phone Number:
+    <input type="text" formControlName="PhoneNumber">
+  </label>
+
+  <button type="submit">Update Owner</button>
+</form>
+
