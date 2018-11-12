@@ -3,8 +3,8 @@ export class Pet {
   name?: string;
   type?: string;
   color?: string;
-  birthDate?: Date;
-  soldDate?: Date;
+  birthDate?: string;
+  soldDate?: string;
   previousOwner?: string;
   price?: number;
 }

@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
   title = 'PetShop';
+  user: any;
   constructor() { }
 
   ngOnInit() {
+    if (localStorage.getItem('currentUser') != null) {
+      this.user = JSON.parse(localStorage.getItem('currentUser'));
+    }
   }
 
 }

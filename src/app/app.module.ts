@@ -8,13 +8,14 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PetsListComponent } from './pets/pets-list/pets-list.component';
 import { PetsDetailsComponent } from './pets/pets-details/pets-details.component';
 import { PetAddComponent } from './pets/pet-add/pet-add.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PetUpdateComponent } from './pets/pet-update/pet-update.component';
 import {HttpClientModule} from '@angular/common/http';
 import { OwnersListComponent } from './owners/owners-list/owners-list.component';
 import { OwnersDetailsComponent } from './owners/owners-details/owners-details.component';
 import { OwnerAddComponent } from './owners/owner-add/owner-add.component';
 import { OwnerUpdateComponent } from './owners/owner-update/owner-update.component';
+import { LoginComponent } from './shared/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,15 @@ import { OwnerUpdateComponent } from './owners/owner-update/owner-update.compone
     OwnersListComponent,
     OwnersDetailsComponent,
     OwnerAddComponent,
-    OwnerUpdateComponent
+    OwnerUpdateComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
